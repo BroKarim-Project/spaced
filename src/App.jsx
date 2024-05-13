@@ -8,21 +8,20 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulasi penundaan sebelum menampilkan komponen Navigation dan Hero
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 10000); // Misalnya 10 detik penundaan, sesuaikan dengan kebutuhan kamu
+    }, 4000);
 
-    // Membersihkan timeout saat komponen unmount
     return () => clearTimeout(timeout);
   }, []);
   return (
     <>
       {loading ? (
-        <motion.div>
-          <p className="mx-auto mt-64 max-w-2xl text-lg tracking-tight text-slate-700 ">
-            <NumberCounter end={100} start={0} delay="10" />
+        <motion.div className="h-screen w-full bg-black flex items-center gap-2 justify-center">
+          <p className="pb-4 text-xs tracking-tight text-white ">
+            <NumberCounter end={100} start={0} delay="2" />
           </p>
+          <h2 className=" text-lg tracking-tight text-white ">Spaced</h2>
         </motion.div>
       ) : (
         <>
@@ -35,22 +34,3 @@ function App() {
 }
 
 export default App;
-
-/*
-
-
-<AnimateSharedLayout>
-        <AnimatePresence>
-          {loading ? (
-            <motion.div>
-              <PreLoader setLoading={setLoading} />
-            </motion.div>
-          ) : (
-            <>
-              <Navigation />
-              <Hero />
-            </>
-          )}
-        </AnimatePresence>
-      </AnimateSharedLayout>
-*/
