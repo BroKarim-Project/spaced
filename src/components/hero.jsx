@@ -49,7 +49,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="mx-auto relative overflow-hidden h-screen px-4 sm:px-6 lg:px-8  text-center md:pt-0 pt-4" style={{ overscrollBehaviorX: 'contain' }} ref={refa}>
+      <div className="mx-auto relative overflow-hidden h-full px-4 sm:px-6 lg:px-8  text-center md:pt-0 pt-4" style={{ overscrollBehaviorX: 'contain' }} ref={refa}>
         <h1 className="mx-auto max-w-4xl font-display text-3xl sm:text-5xl font-medium tracking-tight text-slate-900 ">Explore and Experience</h1>
         <p className="mx-auto mt-2 max-w-2xl text-xs md:text-lg tracking-tight text-slate-700 sm:mt-6">There is much more to avoid thath the eyes can see. Lets go to the place where gravity doesn't matter.</p>
         <div className="mt-4 flex flex-col justify-center gap-y-5 sm:mt-4 sm:flex-row sm:gap-y-0 sm:gap-x-6">
@@ -71,5 +71,3 @@ export default function Hero() {
     </>
   );
 }
-
-// sambnungan card : https://www.youtube.com/watch?v=Ot4nZ6UjJLE [10:41]

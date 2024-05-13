@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { frame, motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Card({ image }) {
   const [showOverlay, setShowOverlay] = useState(false);
